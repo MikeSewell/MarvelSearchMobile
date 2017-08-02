@@ -1,13 +1,15 @@
 // Utils
-
+@import 'utils/vars';
 
 // Base Styles
 @import 'base/reset';
 
 // Layout
+
 @import 'layout/header';
 @import 'layout/nav';
-
 @import 'layout/footer';
+@import 'layout/body';
 
 // Component
+@import 'components/search';

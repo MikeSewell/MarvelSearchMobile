@@ -1,0 +1,36 @@
+.teamback form {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-right: auto;
+  transform: translate(-50%, -50%);
+    input{
+      font-size: 1.3rem;
+      outline: none;
+      box-sizing: border-box;
+      width: 98%;
+      background: #fff;
+      margin-bottom: 4%;
+      border: 1px solid #ccc;
+      padding: .3rem;
+      color: #555;
+      }
+}
+.button{
+  position: absolute;
+  background-image: url('../images/search.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #FFF;
+  border: 2px solid white;
+  width: 2rem;
+  margin-left: -.4rem;
+  height: 2.2rem;
+  left: 16.6rem;
+  top: 1.01;
+}
+
+.teamback p{
+  background-color: #518cca;
+  color: #FFF;
+}
