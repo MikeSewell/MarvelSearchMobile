@@ -1,5 +1,3 @@
-//let userinput = "spider-man";
-
 // HTTP Request
 function loadData() {
   let userinput = document.querySelector("input").value
@@ -31,9 +29,6 @@ function loadData() {
       let imageX = responseOject.data.results[0].thumbnail.extension
       charImaUrl = characterImage + "." + imageX
       searchHead.innerHTML = "Here are some comics from " + characterName
-      //let characterInsert = "<p id='char'><img id='char2' src=" + charImaUrl + "></p>"
-      //const characterDisplay = document.querySelector("h2")
-      //characterDisplay.insertAdjacentHTML("afterend", characterInsert)
       console.log(characterName)
       console.log(charImaUrl)
       console.log(characterID)
