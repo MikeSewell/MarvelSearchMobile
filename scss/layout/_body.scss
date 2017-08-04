@@ -1,4 +1,9 @@
-body{
-  background-color: #f78f3f;
-  font-style: Arial, sans-serif;
+body {
+  background-color: $marvelOrange;
+  font-style: $fontFam;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
 }

@@ -56,10 +56,11 @@ h1 img {
 .teamback {
   z-index: 2;
   position: relative;
-  background-image: url("../images/marvel_background.jpg");
+  background-image: url("../images/marvel-heroes.jpg");
+  background-position: 50% 40%;
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 17rem; }
+  height: 25rem; }
 
 header {
   overflow: hidden;
@@ -91,6 +92,51 @@ body {
   background-color: #f78f3f;
   font-style: Arial, sans-serif; }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 3rem; }
+
+.searchSection h2 {
+  display: inline-block;
+  background-color: #504a4a;
+  color: #fff;
+  padding: .5rem 1rem;
+  margin: 1rem; }
+
+.searchSection img {
+  max-width: 14rem; }
+
+.searchSection a {
+  padding: .5rem 0;
+  max-width: 14rem;
+  display: block;
+  background-color: #e23636;
+  color: #fff; }
+
+.searchSection ul {
+  margin: 0 auto;
+  text-align: center; }
+
+.searchSection li {
+  margin: 0 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  vertical-align: top; }
+
+.searchSection .wrapper #marvellink {
+  position: relative; }
+
+.searchSection .wrapper #marvellink a {
+  position: absolute;
+  right: 42.95%;
+  left: 42.95%;
+  display: block;
+  background-color: #518cca;
+  color: #fff;
+  padding: .5rem 1rem;
+  min-width: 138px; }
+
 .teamback form {
   position: absolute;
   top: 60%;
@@ -109,6 +155,7 @@ body {
     color: #555; }
 
 .button {
+  border: 1px solid #ccc;
   position: absolute;
   background-image: url("../images/search.png");
   background-size: 100%;
@@ -119,7 +166,7 @@ body {
   margin-left: -.4rem;
   height: 2.2rem;
   left: 16.6rem;
-  top: 1.01; }
+  top: 1.01rem; }
 
 .teamback p {
   background-color: #518cca;
