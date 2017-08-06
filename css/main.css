@@ -1,3 +1,14 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 3rem; }
+
+.teamback, .searchSection .wrapper #marvellink {
+  position: relative; }
+
+h1 img, .searchSection .wrapper #marvellink a, .teamback form, .button {
+  position: absolute; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -46,7 +57,6 @@ table {
   border-spacing: 0; }
 
 h1 img {
-  position: absolute;
   height: 3rem;
   width: auto;
   top: 1rem;
@@ -55,7 +65,6 @@ h1 img {
 
 .teamback {
   z-index: 2;
-  position: relative;
   background-image: url("../images/marvel-heroes.jpg");
   background-position: 50% 40%;
   background-repeat: no-repeat;
@@ -92,11 +101,6 @@ body {
   background-color: #f78f3f;
   font-style: Arial, sans-serif; }
 
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 3rem; }
-
 .searchSection h2 {
   display: inline-block;
   background-color: #504a4a;
@@ -124,11 +128,7 @@ body {
   display: inline-block;
   vertical-align: top; }
 
-.searchSection .wrapper #marvellink {
-  position: relative; }
-
 .searchSection .wrapper #marvellink a {
-  position: absolute;
   right: 42.95%;
   left: 42.95%;
   display: block;
@@ -138,7 +138,6 @@ body {
   min-width: 138px; }
 
 .teamback form {
-  position: absolute;
   top: 60%;
   left: 50%;
   margin-right: auto;
@@ -156,11 +155,10 @@ body {
 
 .button {
   border: 1px solid #ccc;
-  position: absolute;
   background-image: url("../images/search.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-color: #FFF;
+  background-color: #fff;
   border: 2px solid white;
   width: 2rem;
   margin-left: -.4rem;
@@ -170,4 +168,4 @@ body {
 
 .teamback p {
   background-color: #518cca;
-  color: #FFF; }
+  color: #fff; }

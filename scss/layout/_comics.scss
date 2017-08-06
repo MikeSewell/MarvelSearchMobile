@@ -30,10 +30,10 @@
   }
 }
 .searchSection .wrapper #marvellink {
-  position: relative;
+  @extend %parent;
 }
 .searchSection .wrapper #marvellink a {
-  position: absolute;
+  @extend %child;
   right: 42.95%;
   left: 42.95%;
   display: block;

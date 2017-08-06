@@ -1,9 +1,6 @@
 body {
-  background-color: $marvelOrange;
-  font-style: $fontFam;
+  @include background($marvelOrange,$fontFam);
 }
 .wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 3rem;
+  @extend %center;
 }

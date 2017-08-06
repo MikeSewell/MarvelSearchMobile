@@ -1,29 +1,28 @@
 .teamback form {
-  position: absolute;
+  @extend %child;
   top: 60%;
   left: 50%;
   margin-right: auto;
   transform: translate(-50%, -50%);
-    input{
-      font-size: 1.3rem;
-      outline: none;
-      box-sizing: border-box;
-      width: 98%;
-      background: #fff;
-      margin-bottom: 4%;
-      border: 1px solid #ccc;
-      padding: .3rem;
-      color: #555;
-      }
+  input {
+    font-size: 1.3rem;
+    outline: none;
+    box-sizing: border-box;
+    width: 98%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: .3rem;
+    color: #555;
+  }
 }
-.button{
+.button {
+  @extend %child;
   border: 1px solid #ccc;
-
-  position: absolute;
   background-image: url('../images/search.png');
   background-size: 100%;
   background-repeat: no-repeat;
-  background-color: #FFF;
+  background-color: #fff;
   border: 2px solid white;
   width: 2rem;
   margin-left: -.4rem;
@@ -32,7 +31,7 @@
   top: 1.01rem;
 }
 
-.teamback p{
+.teamback p {
   background-color: #518cca;
-  color: #FFF;
+  color: #fff;
 }
