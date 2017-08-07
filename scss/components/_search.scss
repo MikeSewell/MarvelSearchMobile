@@ -1,37 +1,69 @@
-.teamback form {
-  @extend %child;
-  top: 60%;
-  left: 50%;
-  margin-right: auto;
-  transform: translate(-50%, -50%);
-  input {
-    font-size: 1.3rem;
-    outline: none;
-    box-sizing: border-box;
-    width: 98%;
-    background: #fff;
-    margin-bottom: 4%;
-    border: 1px solid #ccc;
-    padding: .3rem;
-    color: #555;
+// .teamback form {
+//   position: absolute;
+//   top: 60%;
+//   left: 50%;
+//   margin-right: auto;
+//   transform: translate(-50%, -50%);
+//   input {
+//     font-size: 1.3rem;
+//     outline: none;
+//     box-sizing: border-box;
+//     width: 98%;
+//     background: #fff;
+//     margin-bottom: 4%;
+//     border: 1px solid #ccc;
+//     padding: .3rem;
+//     color: #555;
+//   }
+// }
+// .button {
+//   border: 1px solid #ccc;
+//
+//   position: absolute;
+//   background-image: url('../images/search.png');
+//   background-size: 100%;
+//   background-repeat: no-repeat;
+//   background-color: #fff;
+//   border: 2px solid white;
+//   width: 2rem;
+//   margin-left: -.4rem;
+//   height: 2.2rem;
+//   left: 16.6rem;
+//   top: 1.01rem;
+// }
+//
+// .teamback p {
+//   background-color: #518cca;
+//   color: #fff;
+// }
+@media #{$small} {
+  .teamback form {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    input {
+      font-size: 1.3rem;
+      outline: none;
+      box-sizing: border-box;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: .3rem;
+      color: #555;
+      background-image: url('../images/search.png');
+      background-size: 9%;
+      background-position: right;
+      background-repeat: no-repeat;
+      width: 75%;
+    }
+    .button {
+      visibility: hidden;
+    }
+    p {
+      padding: .2rem .5rem;
+      background-color: #518cca;
+      color: #fff;
+    }
   }
-}
-.button {
-  @extend %child;
-  border: 1px solid #ccc;
-  background-image: url('../images/search.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-color: #fff;
-  border: 2px solid white;
-  width: 2rem;
-  margin-left: -.4rem;
-  height: 2.2rem;
-  left: 16.6rem;
-  top: 1.01rem;
-}
-
-.teamback p {
-  background-color: #518cca;
-  color: #fff;
 }

@@ -1,11 +1,21 @@
-footer{
-  position: bottom;
-  background-color: #504a4a;
-  color: #f78f3f;
+@media #{large} {
+  footer {
+    position: bottom;
+    background-color: #504a4a;
+    color: #f78f3f;
 
-  p{
+    p {
+      text-align: center;
+      padding: 2rem;
+      margin: 0 auto;
+    }
+  }
+}
+@media #{$small} {
+  footer {
+    background-color: #504a4a;
+    color: #f78f3f;
     text-align: center;
-    padding: 2rem;
-    margin: 0 auto;
+    padding: .5rem;
   }
 }

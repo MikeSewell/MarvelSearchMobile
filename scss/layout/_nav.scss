@@ -1,25 +1,49 @@
-header {
-  overflow: hidden;
-  top: 0;
-  background-color: rgba(0,0,0,.4);
+@media #{$large} {
+  header {
+    overflow: hidden;
+    top: 0;
+    background-color: rgba(0, 0, 0, .4);
 
-  ul {
-    text-transform: uppercase;
-  }
+    ul {
+      text-transform: uppercase;
+    }
 
     li {
       float: right;
     }
 
     li a {
-        display: inline-block;
-        color: $marvelOrange;
-        text-align: center;
-        padding: 2rem ;
-        text-decoration: none;
+      display: inline-block;
+      color: $marvelOrange;
+      text-align: center;
+      padding: 2rem;
+      text-decoration: none;
     }
 
     li a:hover {
-        background-color: $marvelGrey;
+      background-color: $marvelGrey;
     }
+  }
+}
+
+@media #{$small} {
+  header {
+    text-transform: uppercase;
+  }
+  ul {
+    background-color: lightgrey; // TODO: get better color
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  li {
+    float: left;
+    padding: 1rem 0;
+  }
+  li a {
+    // text-align: center;
+    text-decoration: none;
+    color: $marvelOrange;
+    padding: 0 2rem;
+  }
 }
