@@ -50,6 +50,7 @@ function loadData() {
           // characterName = comicOject.data.results[0].name;
 
           for (let j = 0; j < comicOject.data.results.length; j++) {
+            // const { } = comicOject.data.results
             comicTitle = comicOject.data.results[j].title
             let comicImage = comicOject.data.results[j].thumbnail.path
             let comicX = comicOject.data.results[j].thumbnail.extension

@@ -29,21 +29,35 @@
 @media #{$small} {
   header {
     text-transform: uppercase;
+    position: relative;
+
+    ul {
+      visibility: hidden;
+      //   background-color: lightgrey; // TODO: get better color
+      //   position: fixed;
+      //   bottom: 0;
+      //   width: 100%;
+      // }
+      // li {
+      //   float: left;
+      //   padding: 1rem 0;
+      // }
+      // li a {
+      //   // text-align: center;
+      //   text-decoration: none;
+      //   color: $marvelOrange;
+      //   padding: 0 2rem;
+    }
   }
-  ul {
-    background-color: lightgrey; // TODO: get better color
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  li {
-    float: left;
-    padding: 1rem 0;
-  }
-  li a {
-    // text-align: center;
-    text-decoration: none;
-    color: $marvelOrange;
-    padding: 0 2rem;
-  }
+}
+#navButton {
+  display: block;
+  position: absolute;
+  top: .4rem;
+  right: .8rem;
+  width: 12%;
+  height: 50%;
+  background-image: url("../images/hamburger.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }

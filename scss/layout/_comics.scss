@@ -45,6 +45,7 @@
 
 @media #{$small} {
   .searchSection {
+    text-align: center;
     h2 {
       color: #fff;
       background-color: $marvelGrey;
@@ -53,6 +54,16 @@
     }
     img {
       width: 100%;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    li {
+      flex: 1 1 calc(100% - .5rem);
+      // flex: 1;
+      margin: .5rem;
+      width: 50%;
     }
   }
 }

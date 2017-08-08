@@ -98,19 +98,21 @@ table {
 
 @media (max-device-width: 699px) {
   header {
-    text-transform: uppercase; }
-  ul {
-    background-color: lightgrey;
-    position: fixed;
-    bottom: 0;
-    width: 100%; }
-  li {
-    float: left;
-    padding: 1rem 0; }
-  li a {
-    text-decoration: none;
-    color: #f78f3f;
-    padding: 0 2rem; } }
+    text-transform: uppercase;
+    position: relative; }
+    header ul {
+      visibility: hidden; } }
+
+#navButton {
+  display: block;
+  position: absolute;
+  top: .4rem;
+  right: .8rem;
+  width: 12%;
+  height: 50%;
+  background-image: url("../images/hamburger.png");
+  background-repeat: no-repeat;
+  background-size: 100%; }
 
 @media large {
   footer {
@@ -134,13 +136,22 @@ body {
   font-family: Arial, sans-serif; }
 
 @media (max-device-width: 699px) {
-  .searchSection h2 {
-    color: #fff;
-    background-color: #504a4a;
-    padding: 1.5rem;
-    font-size: 1.1rem; }
-  .searchSection img {
-    width: 100%; } }
+  .searchSection {
+    text-align: center; }
+    .searchSection h2 {
+      color: #fff;
+      background-color: #504a4a;
+      padding: 1.5rem;
+      font-size: 1.1rem; }
+    .searchSection img {
+      width: 100%; }
+    .searchSection ul {
+      display: flex;
+      flex-wrap: wrap; }
+    .searchSection li {
+      flex: 1 1 calc(100% - .5rem);
+      margin: .5rem;
+      width: 50%; } }
 
 @media (max-device-width: 699px) {
   .teamback form {
@@ -161,7 +172,7 @@ body {
       background-size: 9%;
       background-position: right;
       background-repeat: no-repeat;
-      width: 75%; }
+      width: 81.5%; }
     .teamback form .button {
       visibility: hidden; }
     .teamback form p {
