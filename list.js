@@ -1,23 +1,20 @@
 // HTTP Request
 function loadData() {
-  let userinput = document.querySelector("input").value
+  const userinput = document.querySelector("input").value
   const searchSec = document.querySelector(".comicList")
+  const input = encodeURI(userinput)
   let characterID = ""
-  let input = encodeURI(userinput)
   let characterName = ""
-  let charImaUrl = ""
-  let chaSeries = ""
-  let seriesArr = []
   let searchString =
     "https://gateway.marvel.com:443/v1/public/characters?name=" +
     input +
     "&apikey=ee1f0c547b636265ac05222e1efd5e25"
 
   // ajax Request
-  let xhr = new XMLHttpRequest()
+  const xhr = new XMLHttpRequest()
   xhr.open("GET", searchString, true)
   xhr.onload = function() {
-    let responseOject = JSON.parse(xhr.responseText)
+    const responseOject = JSON.parse(xhr.responseText)
     let characterVal = responseOject.data.count
     let searchHead = document.querySelector("h2")
 
@@ -27,13 +24,9 @@ function loadData() {
       characterID = responseOject.data.results[0].id
       let characterImage = responseOject.data.results[0].thumbnail.path
       let imageX = responseOject.data.results[0].thumbnail.extension
-      charImaUrl = characterImage + "." + imageX
+      let charImaUrl = characterImage + "." + imageX
       searchHead.innerHTML = "Here are some comics from " + characterName
-      console.log(characterName)
-      console.log(charImaUrl)
-      console.log(characterID)
       comicPop()
-
       let comics = []
       let comicsImageUrl = []
       function comicPop() {
@@ -92,4 +85,18 @@ buttonSub.addEventListener("submit", function(e) {
   comicClear.innerHTML = ""
   e.preventDefault()
   loadData()
+  buttonSub.reset()
+})
+
+const hamMenus = document.querySelector("#menu")
+const menulist = document.querySelector("#menulist")
+console.log(hamMenus)
+hamMenus.addEventListener("touchstart", function() {
+  if (hamMenus.className == "navbuttonshow") {
+    hamMenus.className = "showmenu"
+    menulist.className = "showlist"
+  } else {
+    hamMenus.className = "navbuttonshow"
+    menulist.className = "hidelist"
+  }
 })

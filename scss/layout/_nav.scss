@@ -30,8 +30,9 @@
   header {
     text-transform: uppercase;
     position: relative;
+    list-style: none;
 
-    ul {
+    .hidelist {
       visibility: hidden;
       //   background-color: lightgrey; // TODO: get better color
       //   position: fixed;
@@ -48,11 +49,29 @@
       //   color: $marvelOrange;
       //   padding: 0 2rem;
     }
+    .showlist {
+      position: fixed;
+      top: 10.5%;
+      right: 3%;
+      text-align: right;
+      z-index: 99;
+      color: #fff;
+      font-size: 1.6rem;
+      li {
+        padding: .8rem;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      a:visted {
+      }
+    }
   }
 }
-#navButton {
+.navbuttonshow {
   display: block;
-  position: absolute;
+  position: fixed;
   top: .4rem;
   right: .8rem;
   width: 12%;
@@ -60,4 +79,14 @@
   background-image: url("../images/hamburger.png");
   background-repeat: no-repeat;
   background-size: 100%;
+}
+.showmenu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 35%;
+  background-image: url("../images/close.png");
+  background-repeat: no-repeat;
+  background-position: 95% 3%;
+  background-color: rgba(0, 0, 0, .9);
 }
