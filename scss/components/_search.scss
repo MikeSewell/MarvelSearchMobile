@@ -1,48 +1,51 @@
-// .teamback form {
-//   position: absolute;
-//   top: 60%;
-//   left: 50%;
-//   margin-right: auto;
-//   transform: translate(-50%, -50%);
-//   input {
-//     font-size: 1.3rem;
-//     outline: none;
-//     box-sizing: border-box;
-//     width: 98%;
-//     background: #fff;
-//     margin-bottom: 4%;
-//     border: 1px solid #ccc;
-//     padding: .3rem;
-//     color: #555;
-//   }
-// }
-// .button {
-//   border: 1px solid #ccc;
-//
-//   position: absolute;
-//   background-image: url('../images/search.png');
-//   background-size: 100%;
-//   background-repeat: no-repeat;
-//   background-color: #fff;
-//   border: 2px solid white;
-//   width: 2rem;
-//   margin-left: -.4rem;
-//   height: 2.2rem;
-//   left: 16.6rem;
-//   top: 1.01rem;
-// }
-//
-// .teamback p {
-//   background-color: #518cca;
-//   color: #fff;
-// }
-@media #{$small} {
+.teamback form {
+  margin-top: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  input {
+    font-size: 1.3rem;
+    outline: none;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: .3rem;
+    padding-right: 1rem;
+    color: #555;
+    width: 81.5%;
+  }
+  .button {
+    background-image: url('../images/search.png');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    border: none;
+    height: 26px;
+    width: 20px;
+    right: 41px;
+    bottom: 2px;
+  }
+  p {
+    padding: .2rem .5rem;
+    background-color: #518cca;
+    color: #fff;
+  }
+}
+@media #{$medium} {
   .teamback form {
-    margin-top: 6rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+    margin-top: 9.3rem;
+
+    .button {
+      height: 28px;
+      width: 24px;
+      right: 81px;
+    }
+  }
+}
+@media #{$large} {
+  .teamback form {
     input {
       font-size: 1.3rem;
       outline: none;
@@ -50,20 +53,23 @@
       background: #fff;
       border: 1px solid #ccc;
       padding: .3rem;
+      padding-right: 1rem;
       color: #555;
-      background-image: url('../images/search.png');
-      background-size: 9%;
-      background-position: right;
-      background-repeat: no-repeat;
-      width: 81.5%;
+      width: 30%;
     }
     .button {
-      visibility: hidden;
+      height: 28px;
+      width: 24px;
+      right: 23rem;
     }
-    p {
-      padding: .2rem .5rem;
-      background-color: #518cca;
-      color: #fff;
+  }
+}
+@media #{$xlarge} {
+  .teamback form {
+    .button {
+      height: 28px;
+      width: 24px;
+      right: 26.7rem;
     }
   }
 }

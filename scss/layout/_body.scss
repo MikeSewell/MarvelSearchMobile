@@ -1,6 +1,10 @@
 body {
   @include background($marvelOrange,$fontFam);
 }
-// .wrapper {
-//   @extend %center;
-// }
+@media #{$large} {
+  .wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}

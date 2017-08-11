@@ -1,40 +1,62 @@
-@media #{large} {
-  h1 img {
-    position: absolute;
-    height: 3rem;
-    width: auto;
-    top: 1rem;
-    left: 3rem;
-    background-color: rgba(255, 255, 255, .4);
-  }
-  .teamback {
+.teamback {
+  background-image: url('../images/marvel-heroes.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 12rem;
+  header {
     position: relative;
-    z-index: 2;
-    background-image: url('../images/marvel-heroes.jpg');
-    background-position: 50% 40%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 25rem;
   }
-}
-
-@media #{$small} {
   h1 {
     display: flex;
     justify-content: center;
-    // top: 1rem;
+    align-items: center;
+    // margin-right: -4rem;
   }
-  .teamback img {
-    top: 1rem;
+  img {
+    background-color: $marvelGrey;
     width: 60%;
-    height: 1%;
-    padding-right: .2rem;
-    background-color: darkgrey;
+    height: auto;
+    padding-right: .3rem;
+  }
+}
+.teambackmenu {
+  background-color: rgba(0, 0, 0, .9);
+  height: 12rem;
+  h1,
+  form {
+    display: none;
+  }
+}
+@media #{$medium} {
+  .teamback {
+    height: 22rem;
+
+    img {
+      width: 42%;
+    }
+  }
+  .teambackmenu {
+    height: 22rem;
+  }
+}
+@media #{$large} {
+  #menu {
+    display: none;
+  }
+  header {
+    background-color: rgba(0, 0, 0, .8);
+    height: 5.6rem;
   }
   .teamback {
-    background-image: url('../images/marvel-heroes.jpg');
-    background-position: 50% 40%;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    h1 {
+      justify-content: flex-start;
+    }
+    img {
+      width: 23%;
+      position: absolute;
+      left: 2rem;
+      top: 1rem;
+    }
   }
 }

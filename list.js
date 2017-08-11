@@ -11,6 +11,7 @@ window.addEventListener("load", () => {
   })
 
   // hamburger menu
+  const mainhead = document.querySelector("#fullhead")
   const hamMenus = document.querySelector("#menu")
   const menulist = document.querySelector("#menulist")
   console.log(hamMenus)
@@ -18,9 +19,11 @@ window.addEventListener("load", () => {
     if (hamMenus.className == "navbuttonshow") {
       hamMenus.className = "showmenu"
       menulist.className = "showlist"
+      mainhead.className = "teambackmenu"
     } else {
       hamMenus.className = "navbuttonshow"
       menulist.className = "hidelist"
+      mainhead.className = "teamback"
     }
   })
 })

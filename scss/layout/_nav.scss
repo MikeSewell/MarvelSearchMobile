@@ -1,92 +1,82 @@
-@media #{$large} {
-  header {
-    overflow: hidden;
-    top: 0;
-    background-color: rgba(0, 0, 0, .4);
-
-    ul {
-      text-transform: uppercase;
-    }
-
-    li {
-      float: right;
-    }
-
-    li a {
-      display: inline-block;
-      color: $marvelOrange;
-      text-align: center;
-      padding: 2rem;
-      text-decoration: none;
-    }
-
-    li a:hover {
-      background-color: $marvelGrey;
-    }
-  }
-}
-
-@media #{$small} {
-  header {
-    text-transform: uppercase;
-    position: relative;
-    list-style: none;
-
-    .hidelist {
-      visibility: hidden;
-      //   background-color: lightgrey; // TODO: get better color
-      //   position: fixed;
-      //   bottom: 0;
-      //   width: 100%;
-      // }
-      // li {
-      //   float: left;
-      //   padding: 1rem 0;
-      // }
-      // li a {
-      //   // text-align: center;
-      //   text-decoration: none;
-      //   color: $marvelOrange;
-      //   padding: 0 2rem;
-    }
-    .showlist {
-      position: fixed;
-      top: 9.5%;
-      right: 3%;
-      text-align: right;
-      z-index: 99;
-      color: #fff;
-      font-size: 1.6rem;
-      li {
-        padding: .8rem;
-      }
-      a {
-        text-decoration: none;
-        color: #fff;
-      }
-      a:visted {
-      }
-    }
-  }
-}
 .navbuttonshow {
   display: block;
-  position: fixed;
+  position: absolute;
   top: .4rem;
   right: .8rem;
   width: 12%;
-  height: 50%;
+  height: 40%;
   background-image: url("../images/hamburger.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 .showmenu {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
-  height: 35%;
+  height: 10rem;
   background-image: url("../images/close.png");
   background-repeat: no-repeat;
   background-position: 95% 3%;
-  background-color: rgba(0, 0, 0, .9);
+}
+.hidelist {
+  visibility: hidden;
+}
+.showlist {
+  position: absolute;
+  color: #fff;
+  text-align: right;
+  right: 0;
+  top: 3rem;
+  text-transform: uppercase;
+  ul {
+    z-index: 99;
+  }
+  li {
+    padding: .3rem;
+    padding-right: 1rem;
+  }
+  a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+  }
+}
+@media #{$medium} {
+  .navbuttonshow {
+    top: 1.4rem;
+    right: 1.8rem;
+    width: 6%;
+    height: 47%;
+  }
+  .showmenu {
+    top: 1.4rem;
+  }
+  .showlist {
+    right: 2rem;
+    top: 5rem;
+    li {
+      padding: 1.3rem;
+      padding-right: 1rem;
+    }
+  }
+}
+@media #{$large} {
+  .hidelist,
+  .showlist {
+    text-transform: uppercase;
+    visibility: visible;
+    display: flex;
+    justify-content: flex-end;
+    li {
+      padding: 2.2rem 2rem;
+    }
+    li:hover {
+      background-color: $marvelGrey;
+    }
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #fff;
+    }
+  }
 }
