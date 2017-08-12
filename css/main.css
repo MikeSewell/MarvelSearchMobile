@@ -204,6 +204,16 @@ body {
   .searchSection a {
     color: #518cca;
     text-decoration: none; }
+  .searchSection #marvellink {
+    transform: translate(-50%, -50%);
+    margin-left: 50%;
+    margin-top: 2rem;
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    width: 11rem;
+    background-color: #e23636; }
+    .searchSection #marvellink a {
+      color: #504a4a; }
 
 @media (min-width: 767px) {
   .searchSection li {

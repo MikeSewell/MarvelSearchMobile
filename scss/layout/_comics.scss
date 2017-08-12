@@ -24,6 +24,18 @@
     color: $marvelBlue;
     text-decoration: none;
   }
+  #marvellink {
+    transform: translate(-50%, -50%);
+    margin-left: 50%;
+    margin-top: 2rem;
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    width: 11rem;
+    background-color: $marvelRed;
+    a {
+      color: $marvelGrey;
+    }
+  }
 }
 @media #{$medium} {
   .searchSection {

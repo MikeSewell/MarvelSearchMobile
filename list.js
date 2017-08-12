@@ -42,6 +42,7 @@ function loadData() {
   xhr.open("GET", searchString, true)
   xhr.onload = () => {
     const responseOject = JSON.parse(xhr.responseText)
+    localStorage.setItem("lastSearchedItem", JSON.stringify(responseOject))
     let searchHead = document.querySelector("h2")
     console.log(responseOject)
 
