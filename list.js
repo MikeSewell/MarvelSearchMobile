@@ -1,5 +1,9 @@
 // load page first
 window.addEventListener("load", () => {
+  if (localStorage.getItem("lastSearchedItem")) {
+    lastView()
+  }
+
   // get search results
   const comicClear = document.querySelector(".comicList")
   const buttonSub = document.querySelector("form")
@@ -42,7 +46,6 @@ function loadData() {
   xhr.open("GET", searchString, true)
   xhr.onload = () => {
     const responseOject = JSON.parse(xhr.responseText)
-    localStorage.setItem("lastSearchedItem", JSON.stringify(responseOject))
     let searchHead = document.querySelector("h2")
     console.log(responseOject)
 
@@ -74,12 +77,12 @@ function comicPop(a, b) {
     "https://gateway.marvel.com:443/v1/public/characters/" +
     id +
     "/comics?apikey=ee1f0c547b636265ac05222e1efd5e25"
-
   // Second API Marvel Request (comics)
   let comicXHR = new XMLHttpRequest()
   comicXHR.open("GET", comicString, true)
   comicXHR.onload = () => {
     let comicOject = JSON.parse(comicXHR.responseText)
+    localStorage.setItem("lastSearchedItem", JSON.stringify(comicOject))
     comicOject.data.results.forEach(comics1 => {
       const { thumbnail, title, urls } = comics1
       let comicImaUrl = thumbnail.path + "." + thumbnail.extension
@@ -95,4 +98,21 @@ function comicPop(a, b) {
     })
   }
   comicXHR.send(null)
+}
+function lastView() {
+  const last = document.querySelector(".comicList")
+  let comicOject = JSON.parse(localStorage.getItem("lastSearchedItem"))
+  comicOject.data.results.forEach(comics1 => {
+    const { thumbnail, title, urls } = comics1
+    let comicImaUrl = thumbnail.path + "." + thumbnail.extension
+    let comicInsert =
+      "<li><img src=" +
+      comicImaUrl +
+      ' ><a href="' +
+      urls[0].url +
+      '">' +
+      title +
+      "</a></li>"
+    last.insertAdjacentHTML("afterbegin", comicInsert)
+  })
 }
