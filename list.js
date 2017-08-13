@@ -18,7 +18,6 @@ window.addEventListener("load", () => {
   const mainhead = document.querySelector("#fullhead")
   const hamMenus = document.querySelector("#menu")
   const menulist = document.querySelector("#menulist")
-  console.log(hamMenus)
   hamMenus.addEventListener("touchstart", () => {
     if (hamMenus.className == "navbuttonshow") {
       hamMenus.className = "showmenu"
@@ -69,7 +68,7 @@ function loadData() {
   xhr.send(null)
 }
 
-// populate characters comics
+// populate characters comics for search input
 function comicPop(a, b) {
   let id = a
   let searchSec = b
@@ -81,24 +80,13 @@ function comicPop(a, b) {
   let comicXHR = new XMLHttpRequest()
   comicXHR.open("GET", comicString, true)
   comicXHR.onload = () => {
-    let comicOject = JSON.parse(comicXHR.responseText)
-    localStorage.setItem("lastSearchedItem", JSON.stringify(comicOject))
-    comicOject.data.results.forEach(comics1 => {
-      const { thumbnail, title, urls } = comics1
-      let comicImaUrl = thumbnail.path + "." + thumbnail.extension
-      let comicInsert =
-        "<li><img src=" +
-        comicImaUrl +
-        ' ><a href="' +
-        urls[0].url +
-        '">' +
-        title +
-        "</a></li>"
-      searchSec.insertAdjacentHTML("afterbegin", comicInsert)
-    })
+    console.log(comicXHR)
+    localStorage.setItem("lastSearchedItem", comicXHR.responseText)
+    lastView()
   }
   comicXHR.send(null)
 }
+// populate comics from localStorage
 function lastView() {
   const last = document.querySelector(".comicList")
   let comicOject = JSON.parse(localStorage.getItem("lastSearchedItem"))
